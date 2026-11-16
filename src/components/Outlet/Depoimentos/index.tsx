@@ -7,6 +7,8 @@ import PrintCarla from "../../../assets/images/carlakuhlewein.jpg";
 import PrintGisele from "../../../assets/images/giselecorreia.jpg";
 import PrintAbel from "../../../assets/images/abel.png"; 
 import PrintAlex from "../../../assets/images/alex.jpg";
+import PrintJoana from "../../../assets/images/joana.jpeg";
+import PrintMariana from "../../../assets/images/mariana.jpeg";
 
 export const Depoimentos = () => {
   const videosAlunos = [
@@ -20,7 +22,9 @@ export const Depoimentos = () => {
     { src: PrintCarla, nome: "Carla Kuhlewein", cargo: "Aluna do curso" },
     { src: PrintGisele, nome: "Gisele Correia", cargo: "Aluna do curso" },
     { src: PrintAbel, nome: "Andressa Abel", cargo: "Aluna do curso" },
-    { src: PrintAlex, nome: "Pedro Souza", cargo: "Aluno do curso" }
+    { src: PrintAlex, nome: "Pedro Souza", cargo: "Aluno do curso" },
+    { src: PrintJoana, nome: "Joana Oliveira", cargo: "Aluna do curso" },
+    { src: PrintMariana, nome: "Mariana Santos", cargo: "Aluna do curso" }
   ];
 
   return (
@@ -56,7 +60,7 @@ export const Depoimentos = () => {
         </div>
 
         {/* GRID DE PRINTS / DEPOIMENTOS ESCRITOS */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {printsAlunos.map((print, index) => (
             <div key={index} className="group flex flex-col overflow-hidden rounded-3xl border border-violet-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-100/50">
               <div className="relative overflow-hidden rounded-2xl bg-neutral-900/5 h-64 flex items-center justify-center p-2 border border-violet-50">

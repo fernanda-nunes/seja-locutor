@@ -1,6 +1,6 @@
-import { useState, useRef } from "react"; 
+import { useState, useRef } from "react";  
 
-import FotoRita from "../../../assets/images/quem-eu-sou-rita.jpg";
+import FotoRita from "../../../assets/images/quem-eu-sou-rita.jpg"; 
 import VideoLocucao from "../../../assets/videos/radio-locucao-rita.mp4";
 import Randvi from "../../../assets/images/randvi-assassins-creed.jpg"; 
 import Slone from "../../../assets/images/slone-titanfall.jpg";
@@ -74,11 +74,9 @@ export const QuemSouEu = () => {
                   onClick={toggleVideo}
                   className="rounded-full bg-violet-600 px-3 py-1 text-xs font-semibold text-white hover:bg-violet-700 transition-colors cursor-pointer"
                 >
-                  {isPlaying ? "Pausar" : "Reproduzir"}
+                  {isPlaying ? "Pausar" : "Play"}
                 </button>
-                <span className="rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-700">
-                  Showreel
-                </span>
+               
               </div>
             </div>
 
