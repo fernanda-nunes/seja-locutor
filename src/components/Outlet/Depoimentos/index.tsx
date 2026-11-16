@@ -19,12 +19,13 @@ export const Depoimentos = () => {
   ];
 
   const printsAlunos = [
+    { src: PrintMariana, nome: "Mariana Santos", cargo: "Aluna do curso" },
     { src: PrintCarla, nome: "Carla Kuhlewein", cargo: "Aluna do curso" },
+    { src: PrintJoana, nome: "Joana Oliveira", cargo: "Aluna do curso" },
     { src: PrintGisele, nome: "Gisele Correia", cargo: "Aluna do curso" },
     { src: PrintAbel, nome: "Andressa Abel", cargo: "Aluna do curso" },
     { src: PrintAlex, nome: "Pedro Souza", cargo: "Aluno do curso" },
-    { src: PrintJoana, nome: "Joana Oliveira", cargo: "Aluna do curso" },
-    { src: PrintMariana, nome: "Mariana Santos", cargo: "Aluna do curso" }
+    
   ];
 
   return (

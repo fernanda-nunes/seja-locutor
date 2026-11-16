@@ -15,9 +15,7 @@ export const Hero = () => {
         <Overlay
           title="seja locutor"
           subtitle="transformando vozes em oportunidades"
-          // Mobile/Tablet padrão: centralizado e bottom-20
-          // Entre 800px e 1000px (tablet): centralizado e bottom-20
-          // A partir de 1000px (desktop): alinhado à direita (right-120) e bottom-120, sem se mover
+      
           className="absolute bottom-20 left-0 right-0 px-7 pb-20 justify-center 
                      min-[1400px]:bottom-120 min-[1400px]:right-120 min-[1400px]:left-auto min-[1400px]:justify-start 
                      transition-all duration-300 z-10"
