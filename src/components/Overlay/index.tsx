@@ -11,7 +11,7 @@ export const Overlay = ({ children, title, subtitle, className = "" }: OverlayPr
       <div className="flex flex-col items-center text-white w-full">
 
        
-        <h1 className="m-0 text-4xl scale-y-125 md:text-7xl tracking-tight inline-block scale-y-145 origin-bottom"> 
+        <h1 className="m-0 text-4xl scale-y-125 md:text-6xl tracking-tight inline-block scale-y-145 origin-bottom"> 
           {title}
         </h1>
 
