@@ -1,16 +1,20 @@
-import videoFernanda from "../../../assets/videos/fernanda-cipriano.mov"; 
+import { useState } from "react";
+
+import videoFernanda from "../../../assets/videos/fernanda-cipriano.mp4"; 
 import videoWilson from "../../../assets/videos/wilson-alves.mp4";  
 import videoLuciana from "../../../assets/videos/luciana.mp4";
 import videoGuilherme from "../../../assets/videos/guilherme.mp4";
 
-import PrintCarla from "../../../assets/images/carlakuhlewein.jpg";  
-import PrintGisele from "../../../assets/images/giselecorreia.jpg";
-import PrintAbel from "../../../assets/images/abel.png"; 
-import PrintAlex from "../../../assets/images/alex.jpg";
-import PrintJoana from "../../../assets/images/joana.jpeg";
-import PrintMariana from "../../../assets/images/mariana.jpeg";
+import PrintCarla from "../../../assets/images/carlakuhlewein.webp";  
+import PrintGisele from "../../../assets/images/giselecorreia.webp";
+import PrintAbel from "../../../assets/images/abel.webp"; 
+import PrintAlex from "../../../assets/images/alex.webp";
+import PrintJoana from "../../../assets/images/joana.webp";
+import PrintMariana from "../../../assets/images/mariana.webp";
 
 export const Depoimentos = () => {
+  const [activeVideo, setActiveVideo] = useState<number | null>(null);
+
   const videosAlunos = [
     { src: videoFernanda, nome: "Fernanda Cipriano", cargo: "Atriz" },
     { src: videoWilson, nome: "Wilson Alves", cargo: "Locutor de rádio" },
@@ -25,7 +29,6 @@ export const Depoimentos = () => {
     { src: PrintGisele, nome: "Gisele Correia", cargo: "Aluna do curso" },
     { src: PrintAbel, nome: "Andressa Abel", cargo: "Aluna do curso" },
     { src: PrintAlex, nome: "Pedro Souza", cargo: "Aluno do curso" },
-    
   ];
 
   return (
@@ -47,10 +50,30 @@ export const Depoimentos = () => {
         <div className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {videosAlunos.map((aluno, index) => (
             <div key={index} className="group flex flex-col overflow-hidden rounded-3xl border border-violet-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-100/50">
-              <div className="relative overflow-hidden rounded-2xl bg-black aspect-9/16 sm:aspect-4/5 shadow-inner">
-                <video controls className="h-full w-full object-cover" src={aluno.src}>
-                  Seu navegador não suporta vídeos.
-                </video>
+              <div className="relative overflow-hidden rounded-2xl bg-neutral-900 aspect-9/16 sm:aspect-4/5 shadow-inner">
+                {activeVideo === index ? (
+                  <video 
+                    controls 
+                    autoPlay 
+                    playsInline
+                    className="h-full w-full object-cover" 
+                    src={aluno.src}
+                  >
+                    Seu navegador não suporta vídeos.
+                  </video>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setActiveVideo(index)}
+                    aria-label={`Assistir depoimento de ${aluno.nome}`}
+                    className="flex h-full w-full flex-col items-center justify-center gap-3  from-violet-950/80 to-neutral-950 text-white cursor-pointer group-hover:opacity-95"
+                  >
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-violet-600 text-xl shadow-lg transition-transform group-hover:scale-110">
+                      ▶
+                    </span>
+                    <span className="text-xs font-medium text-violet-200">Clique para assistir</span>
+                  </button>
+                )}
               </div>
               <div className="mt-4 px-2">
                 <h3 className="font-semibold text-neutral-900">{aluno.nome}</h3>
@@ -68,6 +91,8 @@ export const Depoimentos = () => {
                 <img
                   src={print.src}
                   alt={`Depoimento de ${print.nome}`}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-contain rounded-lg"
                 />
               </div>

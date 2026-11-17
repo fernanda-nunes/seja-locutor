@@ -1,5 +1,5 @@
 import { CardsAbout } from "./cardsAbout";  
-import IconRita from "../../../assets/images/capa-video-sobre.jpg"; 
+import IconRita from "../../../assets/images/capa-video-sobre.webp"; 
 import VideoApresentacao from "../../../assets/videos/apresentacao-curso-rita.mp4"; 
 
 export const Sobre = () => {
@@ -36,7 +36,7 @@ export const Sobre = () => {
               poster={IconRita}
               controls
               playsInline
-              preload="metadata"
+              preload="none"
               className="h-full w-full object-cover"
             >
               Seu navegador não suporta a reprodução de vídeos.

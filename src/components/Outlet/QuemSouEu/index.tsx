@@ -1,10 +1,11 @@
 import { useState, useRef } from "react";  
 
-import FotoRita from "../../../assets/images/quem-eu-sou-rita.jpg"; 
+import FotoRita from "../../../assets/images/quem-eu-sou-rita.webp"; 
 import VideoLocucao from "../../../assets/videos/radio-locucao-rita.mp4";
-import Randvi from "../../../assets/images/randvi-assassins-creed.jpg"; 
-import Slone from "../../../assets/images/slone-titanfall.jpg";
-import Sif from "../../../assets/images/sif-lego.jpg";
+import Randvi from "../../../assets/images/randvi-assassins-creed.webp"; 
+import Slone from "../../../assets/images/slone-titanfall.webp";
+import Sif from "../../../assets/images/sif-lego.webp";
+import CapaVideoSobre from "../../../assets/images/capa-video-sobre.webp";
 
 export const QuemSouEu = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -34,6 +35,8 @@ export const QuemSouEu = () => {
             <img
               src={FotoRita}
               alt="Rita Mirone - Jornalista, Mentora e Locutora"
+              loading="lazy"
+              decoding="async"
               className="h-24 w-24 sm:h-28 sm:w-28 shrink-0 rounded-full object-cover shadow-md ring-4 ring-violet-200"
             />
             <div>
@@ -76,7 +79,6 @@ export const QuemSouEu = () => {
                 >
                   {isPlaying ? "Pausar" : "Play"}
                 </button>
-               
               </div>
             </div>
 
@@ -84,7 +86,10 @@ export const QuemSouEu = () => {
               <video
                 ref={videoRef}
                 src={VideoLocucao}
+                poster={CapaVideoSobre}
                 controls
+                preload="none"
+                playsInline
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
                 onEnded={() => setIsPlaying(false)}
@@ -117,6 +122,8 @@ export const QuemSouEu = () => {
                 <img 
                   src={item.img} 
                   alt={`Dublagem de Games - ${item.character}`} 
+                  loading="lazy"
+                  decoding="async"
                   className="h-14 w-14 rounded-xl object-cover shrink-0 ring-1 ring-violet-100"
                 />
                 <div>
