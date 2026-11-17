@@ -5,7 +5,7 @@ export const Route = createRootRoute({
   component: RootComponent,
   head: () => ({
     meta: [
-      { title: 'Início - Seja Locutor' }
+      { title: 'Seja Locutor' }
     ]
   })
 })
