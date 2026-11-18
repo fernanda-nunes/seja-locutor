@@ -1,9 +1,15 @@
 import { useState } from "react";
 
-import videoFernanda from "../../../assets/videos/fernanda-cipriano.mp4"; 
+import videoFernanda from "../../../assets/videos/fernanda-cipriano.mp4";  
 import videoWilson from "../../../assets/videos/wilson-alves.mp4";  
 import videoLuciana from "../../../assets/videos/luciana.mp4";
 import videoGuilherme from "../../../assets/videos/guilherme.mp4";
+
+// Imagens de capa (posters) para os vídeos
+import posterFernanda from "../../../assets/images/capa-fernanda.webp";
+import posterWilson from "../../../assets/images/capa-wilson.webp";
+import posterLuciana from "../../../assets/images/capa-luciana.webp";
+import posterGuilherme from "../../../assets/images/capa-guilherme.webp";
 
 import PrintCarla from "../../../assets/images/carlakuhlewein.webp";  
 import PrintGisele from "../../../assets/images/giselecorreia.webp";
@@ -16,15 +22,15 @@ export const Depoimentos = () => {
   const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
   const videosAlunos = [
-    { src: videoFernanda, nome: "Fernanda Cipriano", cargo: "Atriz" },
-    { src: videoWilson, nome: "Wilson Alves", cargo: "Locutor de rádio" },
-    { src: videoLuciana, nome: "Luciana Tierno", cargo: "Jornalista" },
-    { src: videoGuilherme, nome: "Guilherme Pereira", cargo: "Ator e Professor de inglês" }
+    { src: videoFernanda, poster: posterFernanda, nome: "Fernanda Cipriano", cargo: "Atriz" },
+    { src: videoWilson, poster: posterWilson, nome: "Wilson Alves", cargo: "Locutor de rádio" },
+    { src: videoLuciana, poster: posterLuciana, nome: "Luciana Tierno", cargo: "Jornalista" },
+    { src: videoGuilherme, poster: posterGuilherme, nome: "Guilherme Pereira", cargo: "Ator e Professor de inglês" }
   ];
 
   const printsAlunos = [
     { src: PrintMariana, nome: "Mariana Santos", cargo: "Aluna do curso" },
-    { src: PrintCarla, nome: "Carla Kuhlewein", cargo: "Aluna do curso" },
+    { src: PrintCarla, nome: "Carla Kuhlewein", cargo: "Aluna do curso" }, 
     { src: PrintJoana, nome: "Joana Oliveira", cargo: "Aluna do curso" },
     { src: PrintGisele, nome: "Gisele Correia", cargo: "Aluna do curso" },
     { src: PrintAbel, nome: "Andressa Abel", cargo: "Aluna do curso" },
@@ -56,6 +62,7 @@ export const Depoimentos = () => {
                     controls 
                     autoPlay 
                     playsInline
+                    poster={aluno.poster}
                     className="h-full w-full object-cover" 
                     src={aluno.src}
                   >
@@ -66,12 +73,26 @@ export const Depoimentos = () => {
                     type="button"
                     onClick={() => setActiveVideo(index)}
                     aria-label={`Assistir depoimento de ${aluno.nome}`}
-                    className="flex h-full w-full flex-col items-center justify-center gap-3  from-violet-950/80 to-neutral-950 text-white cursor-pointer group-hover:opacity-95"
+                    className="relative flex h-full w-full flex-col items-center justify-center gap-3 text-white cursor-pointer"
                   >
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-violet-600 text-xl shadow-lg transition-transform group-hover:scale-110">
+                    {/* Imagem de Capa (Poster) */}
+                    <img
+                      src={aluno.poster}
+                      alt={`Capa do depoimento de ${aluno.nome}`}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    
+                    {/* Overlay escuro para destacar o botão de play */}
+                    <div className="absolute inset-0 from-neutral-950/80 via-violet-950/30 to-transparent transition-opacity group-hover:opacity-90" />
+
+                    {/* Botão de Play */}
+                    <span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-violet-600 text-xl shadow-lg transition-transform group-hover:scale-110">
                       ▶
                     </span>
-                    <span className="text-xs font-medium text-violet-200">Clique para assistir</span>
+                    <span className="relative z-10 text-xs font-medium text-violet-100 drop-shadow">
+                      Clique para assistir
+                    </span>
                   </button>
                 )}
               </div>

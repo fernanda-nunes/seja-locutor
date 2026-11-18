@@ -5,7 +5,7 @@ import VideoLocucao from "../../../assets/videos/radio-locucao-rita.mp4";
 import Randvi from "../../../assets/images/randvi-assassins-creed.webp"; 
 import Slone from "../../../assets/images/slone-titanfall.webp";
 import Sif from "../../../assets/images/sif-lego.webp";
-import CapaVideoSobre from "../../../assets/images/capa-video-sobre.webp";
+import CapaVideo from "../../../assets/images/capa-locucoes-quem.webp"; 
 
 export const QuemSouEu = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -86,7 +86,7 @@ export const QuemSouEu = () => {
               <video
                 ref={videoRef}
                 src={VideoLocucao}
-                poster={CapaVideoSobre}
+                poster={CapaVideo}
                 controls
                 preload="none"
                 playsInline
