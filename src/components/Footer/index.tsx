@@ -1,6 +1,6 @@
 import { Copyright } from "../Copyright"; 
-import { SocialLinks } from "../SocialLinks"; 
-import { MenuItems } from "../MenuItems";
+import { SocialLinks } from "../SocialLinks";  
+
 
 export const Footer = () => {
   return (
@@ -12,7 +12,6 @@ export const Footer = () => {
             <SocialLinks />
           </div>
 
-          <MenuItems />
         </div>
         <Copyright />
       </div>
