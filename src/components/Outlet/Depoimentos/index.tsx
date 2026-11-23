@@ -3,15 +3,23 @@ import { useState } from "react";
 import videoFernanda from "../../../assets/videos/fernanda-cipriano.mp4";  
 import videoWilson from "../../../assets/videos/wilson-alves.mp4";  
 import videoLuciana from "../../../assets/videos/luciana.mp4";
+<<<<<<< HEAD
 import videoAndressa from "../../../assets/videos/andressa.mp4";
 
+=======
+import videoGuilherme from "../../../assets/videos/guilherme.mp4";
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
 
 // Imagens de capa (posters) para os vídeos
 import posterFernanda from "../../../assets/images/capa-fernanda.webp";
 import posterWilson from "../../../assets/images/capa-wilson.webp";
 import posterLuciana from "../../../assets/images/capa-luciana.webp";
+<<<<<<< HEAD
 import posterAndressa from "../../../assets/images/capa-andressa.webp";
 
+=======
+import posterGuilherme from "../../../assets/images/capa-guilherme.webp";
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
 
 import PrintCarla from "../../../assets/images/carlakuhlewein.webp";  
 import PrintGisele from "../../../assets/images/giselecorreia.webp";
@@ -27,7 +35,11 @@ export const Depoimentos = () => {
     { src: videoFernanda, poster: posterFernanda, nome: "Fernanda Cipriano", cargo: "Atriz" },
     { src: videoWilson, poster: posterWilson, nome: "Wilson Alves", cargo: "Locutor de rádio" },
     { src: videoLuciana, poster: posterLuciana, nome: "Luciana Tierno", cargo: "Jornalista" },
+<<<<<<< HEAD
     { src: videoAndressa, poster: posterAndressa, nome: "Andressa Abel", cargo: "Atriz" },
+=======
+    { src: videoGuilherme, poster: posterGuilherme, nome: "Guilherme Pereira", cargo: "Ator e Professor de inglês" }
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   ];
 
   const printsAlunos = [

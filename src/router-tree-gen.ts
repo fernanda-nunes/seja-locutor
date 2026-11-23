@@ -13,7 +13,10 @@ import { Route as AppLayoutRouteImport } from './pages/_app/layout'
 import { Route as AppIndexRouteImport } from './pages/_app/index'
 import { Route as AppSobreIndexRouteImport } from './pages/_app/sobre/index'
 import { Route as AppQuemSouEuIndexRouteImport } from './pages/_app/quemSouEu/index'
+<<<<<<< HEAD
 import { Route as AppMentoriaIndexRouteImport } from './pages/_app/mentoria/index'
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
 import { Route as AppDepoimentosIndexRouteImport } from './pages/_app/depoimentos/index'
 
 const AppLayoutRoute = AppLayoutRouteImport.update({
@@ -35,11 +38,14 @@ const AppQuemSouEuIndexRoute = AppQuemSouEuIndexRouteImport.update({
   path: '/quemSouEu/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
+<<<<<<< HEAD
 const AppMentoriaIndexRoute = AppMentoriaIndexRouteImport.update({
   id: '/mentoria/',
   path: '/mentoria/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
 const AppDepoimentosIndexRoute = AppDepoimentosIndexRouteImport.update({
   id: '/depoimentos/',
   path: '/depoimentos/',
@@ -49,14 +55,20 @@ const AppDepoimentosIndexRoute = AppDepoimentosIndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
   '/depoimentos': typeof AppDepoimentosIndexRoute
+<<<<<<< HEAD
   '/mentoria': typeof AppMentoriaIndexRoute
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   '/quemSouEu': typeof AppQuemSouEuIndexRoute
   '/sobre': typeof AppSobreIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof AppIndexRoute
   '/depoimentos': typeof AppDepoimentosIndexRoute
+<<<<<<< HEAD
   '/mentoria': typeof AppMentoriaIndexRoute
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   '/quemSouEu': typeof AppQuemSouEuIndexRoute
   '/sobre': typeof AppSobreIndexRoute
 }
@@ -65,21 +77,33 @@ export interface FileRoutesById {
   '/_app': typeof AppLayoutRouteWithChildren
   '/_app/': typeof AppIndexRoute
   '/_app/depoimentos/': typeof AppDepoimentosIndexRoute
+<<<<<<< HEAD
   '/_app/mentoria/': typeof AppMentoriaIndexRoute
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   '/_app/quemSouEu/': typeof AppQuemSouEuIndexRoute
   '/_app/sobre/': typeof AppSobreIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
+<<<<<<< HEAD
   fullPaths: '/' | '/depoimentos' | '/mentoria' | '/quemSouEu' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/depoimentos' | '/mentoria' | '/quemSouEu' | '/sobre'
+=======
+  fullPaths: '/' | '/depoimentos' | '/quemSouEu' | '/sobre'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/depoimentos' | '/quemSouEu' | '/sobre'
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   id:
     | '__root__'
     | '/_app'
     | '/_app/'
     | '/_app/depoimentos/'
+<<<<<<< HEAD
     | '/_app/mentoria/'
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
     | '/_app/quemSouEu/'
     | '/_app/sobre/'
   fileRoutesById: FileRoutesById
@@ -118,6 +142,7 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppQuemSouEuIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
+<<<<<<< HEAD
     '/_app/mentoria/': {
       id: '/_app/mentoria/'
       path: '/mentoria'
@@ -125,6 +150,8 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppMentoriaIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
     '/_app/depoimentos/': {
       id: '/_app/depoimentos/'
       path: '/depoimentos'
@@ -138,7 +165,10 @@ declare module '@tanstack/react-router' {
 interface AppLayoutRouteChildren {
   AppIndexRoute: typeof AppIndexRoute
   AppDepoimentosIndexRoute: typeof AppDepoimentosIndexRoute
+<<<<<<< HEAD
   AppMentoriaIndexRoute: typeof AppMentoriaIndexRoute
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   AppQuemSouEuIndexRoute: typeof AppQuemSouEuIndexRoute
   AppSobreIndexRoute: typeof AppSobreIndexRoute
 }
@@ -146,7 +176,10 @@ interface AppLayoutRouteChildren {
 const AppLayoutRouteChildren: AppLayoutRouteChildren = {
   AppIndexRoute: AppIndexRoute,
   AppDepoimentosIndexRoute: AppDepoimentosIndexRoute,
+<<<<<<< HEAD
   AppMentoriaIndexRoute: AppMentoriaIndexRoute,
+=======
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   AppQuemSouEuIndexRoute: AppQuemSouEuIndexRoute,
   AppSobreIndexRoute: AppSobreIndexRoute,
 }

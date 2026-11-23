@@ -16,7 +16,11 @@ export const Overlay = ({ children, title, subtitle, className = "" }: OverlayPr
         </h1>
 
        
+<<<<<<< HEAD
         <h4 className="m-0 md: text-base md:text-xl md: tracking-[0.01em] inline-block scale-y-145 origin-top"> 
+=======
+        <h4 className="m-0 md: text-base md:text-xl md: tracking-[0.01em] inline-block scale-y-125 origin-top"> 
+>>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
           {subtitle} 
         </h4> 
        
