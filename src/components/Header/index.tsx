@@ -39,7 +39,7 @@ export const Header = () => {
             <ul className="flex gap-4 md:gap-10 items-center">
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">
 
-                <Link to="/sobre">Curso</Link>
+                <Link to="/curso">Curso</Link>
               </li>
 
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">

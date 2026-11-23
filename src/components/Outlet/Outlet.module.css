@@ -6,10 +6,7 @@
   grid-template-columns: repeat(1fr);
     grid-template-areas:
     "sobre "
-<<<<<<< HEAD
     "mentoria "
-=======
->>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
     "quemSouEu "
     "depoimentos ";    
 }
@@ -18,15 +15,11 @@
   grid-area: sobre;
   background-color: rgb(243, 232, 255);
 }
-<<<<<<< HEAD
 
 .mentoria {
   grid-area: mentoria;
   background-color: hwb(142 84% 4%);
 }
-=======
->>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
-  
 
 .quemSouEu {
   grid-area: quemSouEu;

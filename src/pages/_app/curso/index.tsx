@@ -1,12 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Mic } from 'lucide-react' // Importando o ícone de microfone
-<<<<<<< HEAD
-import { Sobre } from '../../../components/Outlet/Curso'
-=======
-import { Sobre } from '../../../components/Outlet/Sobre'
->>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
+import { Curso } from '../../../components/Outlet/Curso'
 
-export const Route = createFileRoute("/_app/sobre/")({
+export const Route = createFileRoute("/_app/curso/")({
   component: RouteComponent,
   head: () => ({
     meta: [{ title: "Sobre - A Voz que Vende" }],
@@ -20,9 +16,9 @@ function RouteComponent() {
 
     <div className="container mx-auto flex flex-col items-center justify-center relative my-5 rounded-[20px] overflow-hidden py-20 bg-purple-100" >
       
-   {/* Componente Sobre */}
+   {/* Componente Curso */}
          <div className="w-full sm:px-6 lg:px-8">
-           < Sobre />
+           < Curso />
          </div>
          
        </div>
