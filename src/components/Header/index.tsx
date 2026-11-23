@@ -11,8 +11,7 @@ const navLinks: NavLink[] = [
 
   { name: "Curso", href: "/curso" },
   { name: "Mentoria", href: "/mentoria" },
-  { name: "Sobre", href: "/sobre" },
-  { name: "Quem sou eu", href: "/quemSouEu" },
+    { name: "Quem sou eu", href: "/quemSouEu" },
   { name: "Depoimentos", href: "/depoimentos" },
 ];
 

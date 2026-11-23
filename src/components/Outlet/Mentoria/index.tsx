@@ -176,31 +176,16 @@ export const Mentoria = () => {
                 </div>
 
                 {/* COLUNA DIREITA */}
-                <div className="relative w-full">
+                <div className="relative ">
 
-                    <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-violet-200/40 blur-2xl" />
+                    <div className="pointer-events-none absolute -right-8 -top-6 h-32 w-25 rounded-full bg-violet-200/40 blur-2xl" />
 
                     <div className="relative space-y-6">
 
                         {/* CARD DO VÍDEO */}
                         <div className="w-full overflow-hidden rounded-3xl border border-violet-100 bg-violet-50/60 p-4 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-violet-100/50 sm:p-6">
 
-                            <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-2xl bg-neutral-900 shadow-lg shadow-violet-100/60 ring-1 ring-violet-100/80">
-
-                                <video
-                                    src={VideoApresentacao}
-                                    poster={posterGuilherme}
-                                    controls
-                                    playsInline
-                                    preload="none"
-                                    className="block h-auto w-full"
-                                >
-                                    Seu navegador não suporta a reprodução de vídeos.
-                                </video>
-
-                            </div>
-
-                            {/* DESCRIÇÃO */}
+                        {/* DESCRIÇÃO */}
                             <div className="px-2 pb-2 pt-5 text-center">
 
                                 <div className="flex items-center justify-center gap-2">
@@ -222,6 +207,23 @@ export const Mentoria = () => {
                                 </p>
 
                             </div>
+
+                            <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-2xl bg-neutral-900 shadow-lg shadow-violet-100/60 ring-1 ring-violet-100/80">
+
+                                <video
+                                    src={VideoApresentacao}
+                                    poster={posterGuilherme}
+                                    controls
+                                    playsInline
+                                    preload="none"
+                                    className="block h-auto w-full"
+                                >
+                                    Seu navegador não suporta a reprodução de vídeos.
+                                </video>
+
+                            </div>
+
+                            
 
                         </div>
 

@@ -1,9 +1,9 @@
 import iconInstagram from "@/assets/images/icon-instagram.png";
-import iconWhatsapp from "@/assets/images/icon-whatsapp.png";
+
 
 const socialLinks = [
   { href: "https://www.instagram.com/instalocutores/", icon: iconInstagram, name: "Instagram" },
-  { href: "https://wa.me/5511988011841", icon: iconWhatsapp, name: "WhatsApp" },
+  
 ];
 
 export const SocialLinks = () => {

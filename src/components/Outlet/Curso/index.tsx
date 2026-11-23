@@ -93,7 +93,7 @@ export const Curso = () => {
           {/* OBSERVAÇÃO */}
           <div className="mt-8 pt-6 border-t border-violet-200/60 text-center lg:text-left">
             <p className="text-xs sm:text-sm font-medium text-neutral-600">
-              <strong className="text-neutral-800">Obs:</strong> Esse curso não forma locutor de rádio e não fornece DRT.
+              <strong className="text-neutral-800">Observação:</strong> Esse curso não forma locutor de rádio e não fornece DRT.
             </p>
           </div>
 
