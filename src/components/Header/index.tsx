@@ -8,12 +8,10 @@ export interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-<<<<<<< HEAD
+
   { name: "Curso", href: "/curso" },
   { name: "Mentoria", href: "/mentoria" },
-=======
   { name: "Sobre", href: "/sobre" },
->>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
   { name: "Quem sou eu", href: "/quemSouEu" },
   { name: "Depoimentos", href: "/depoimentos" },
 ];
@@ -40,21 +38,22 @@ export const Header = () => {
           <nav>
             <ul className="flex gap-4 md:gap-10 items-center">
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">
-<<<<<<< HEAD
+
                 <Link to="/sobre">Curso</Link>
               </li>
+
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">
                 <Link to="/mentoria">Mentoria</Link>
-=======
-                <Link to="/sobre">Sobre</Link>
->>>>>>> e80a9347743e344e6954c2b0e91bc1f017b04347
               </li>
+
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">
                 <Link to="/quemSouEu">Quem sou eu</Link>
               </li>
+
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">
                 <Link to="/depoimentos">Depoimentos</Link>
               </li>
+              
               <li className="lg:hidden">
                 <MenuMobile navLinks={navLinks} />
               </li>
