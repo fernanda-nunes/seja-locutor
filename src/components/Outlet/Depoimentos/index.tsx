@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-import videoFernanda from "../../../assets/videos/fernanda-cipriano.mp4";  
-import videoWilson from "../../../assets/videos/wilson-alves.mp4";  
-import videoLuciana from "../../../assets/videos/luciana.mp4";
+import videoFernanda from "../../../assets/videos/fernanda-cipriano.mp4";   
+import videoWilson from "../../../assets/videos/wilson-alves.mp4";   
+import videoLuciana from "../../../assets/videos/luciana.mp4"; 
+
 import videoAndressa from "../../../assets/videos/andressa.mp4";
 
 
@@ -21,7 +22,7 @@ import PrintJoana from "../../../assets/images/joana.webp";
 import PrintMariana from "../../../assets/images/mariana.webp";
 
 export const Depoimentos = () => {
-  const [activeVideo, setActiveVideo] = useState<number | null>(null);
+  const [activeVideo, setActiveVideo] = useState<number | null>(null); 
 
   const videosAlunos = [
     { src: videoFernanda, poster: posterFernanda, nome: "Fernanda Cipriano", cargo: "Atriz" },
