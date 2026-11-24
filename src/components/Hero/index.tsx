@@ -10,20 +10,15 @@ export const Hero = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    const modalDismissed = sessionStorage.getItem("bf_modal_dismissed");
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 1000);
 
-    if (!modalDismissed) {
-      const timer = setTimeout(() => {
-        setShowModal(true);
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   const handleCloseModal = () => {
     setShowModal(false);
-    sessionStorage.setItem("bf_modal_dismissed", "true");
   };
 
   return (
