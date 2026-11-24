@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { X, Sparkles, ArrowRight } from "lucide-react";
+import { X, Sparkles,  } from "lucide-react";
 
-import Banner from "../../assets/images/hero.jpg";
+import Banner from "../../assets/images/hero.jpg"; 
 import Arrow from "../../assets/images/seta.png";
 import Logo from "../../assets/images/logo.png";
 import { Overlay } from "../Overlay";
@@ -99,28 +99,15 @@ export const Hero = () => {
               Seja Locutor
             </h2>
 
-            <p className="text-yellow-400 text-sm font-semibold mt-1">
+            <p className="text-yellow-400 text-sm font-semibold mt-5">
               Condição especial por tempo limitado
             </p>
 
             <p className="text-zinc-300 text-sm mt-3 leading-relaxed">
-              Garanta sua vaga com desconto exclusivo e transforme sua voz em
-              oportunidades reais na locução.
+              Confira o desconto exclusivo e transforme sua voz em
+              oportunidade.
             </p>
-
-            {/* Botão CTA */}
-            <a
-              href="#checkout"
-              onClick={handleCloseModal}
-              className="mt-5 inline-flex items-center justify-center gap-2 px-5 py-3 bg-yellow-500 hover:bg-yellow-400 text-zinc-950 rounded-xl font-bold text-sm transition-all shadow-lg shadow-yellow-500/20"
-            >
-              Comprar com desconto
-              <ArrowRight className="w-4 h-4" />
-            </a>
-
-            <p className="text-zinc-500 text-xs mt-3">
-              Válido enquanto durar a promoção.
-            </p>
+feat: 
           </div>
         </div>
       )}

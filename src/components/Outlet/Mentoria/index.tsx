@@ -230,7 +230,7 @@ export const Mentoria = () => {
             {/* OBSERVAÇÃO */}
             <div className="mt-8 border-t border-violet-200/60 pt-6 text-center lg:text-left">
                 <p className="text-xs font-medium text-neutral-600 sm:text-sm">
-                    <strong className="text-neutral-800">Observação:</strong> A venda da Mentoria só está disponível para quem concluiu 100% do curso, informações adicionais após a emissão do certificado.
+                    <strong className="text-neutral-800">Nota:</strong> A venda da Mentoria só está disponível para quem concluiu 100% do curso, informações adicionais após a emissão do certificado.
                 </p>
             </div>
         </section>

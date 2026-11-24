@@ -1,11 +1,11 @@
-import { CardsAbout } from "./cardsAbout";  
-import IconRita from "../../../assets/images/capa-video-sobre.webp"; 
-import VideoApresentacao from "../../../assets/videos/apresentacao-curso-rita.mp4"; 
+import { CardsAbout } from "./cardsAbout";
+import IconRita from "../../../assets/images/capa-video-sobre.webp";
+import VideoApresentacao from "../../../assets/videos/apresentacao-curso-rita.mp4";
 
 export const Curso = () => {
   return (
-    <section className="about mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"> 
-      
+    <section className="about mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+
       {/* CABEÇALHO DA SEÇÃO */}
       <div className="mb-12 text-center lg:text-left">
         <div className="mx-auto lg:mx-0 mb-3 h-1.5 w-14 rounded-full bg-violet-600" />
@@ -24,9 +24,10 @@ export const Curso = () => {
           </p>
 
           <p className="mt-4 text-base leading-relaxed text-neutral-600 text-center sm:text-left">
-            Este é o curso de Locução Publicitária/Comercial criado por <strong className="text-neutral-900">Rita Mirone</strong>, 
-            locutora de TV e dubladora, para quem quer descobrir o potencial da própria voz 
-            e aprender a lucrar com ela de forma profissional.
+            Este é o curso de Locução Publicitária/Comercial criado por{" "}
+            <strong className="text-neutral-900">Rita Mirone</strong>, locutora de TV e
+            dubladora, para quem quer descobrir o potencial da própria voz e aprender a
+            lucrar com ela de forma profissional.
           </p>
 
           {/* VÍDEO DE APRESENTAÇÃO */}
@@ -43,16 +44,43 @@ export const Curso = () => {
             </video>
           </div>
 
-          {/* BOTÃO CTA */}
-          <div className="flex justify-center sm:justify-start mt-8">
+          {/* DIV TEMPORÁRIA — BLACK FRIDAY */}
+          <div className="mt-8 w-full rounded-2xl border border-violet-500/40 bg-neutral-950 p-4 sm:p-5 text-white shadow-xl shadow-violet-950/30">
+            {/* Tag de urgência */}
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-400/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-amber-300 ring-1 ring-amber-400/40">
+                <span className="h-2 w-2 rounded-full bg-amber-400 animate-ping" />
+                Black Friday • Tempo Limitado
+              </span>
+              <span className="text-xs font-semibold text-violet-300">
+                Oferta especial de 75% OFF
+              </span>
+            </div>
+
+            {/* Botão principal */}
             <button
               type="button"
-              onClick={() => window.open("https://pay.kiwify.com.br/ZzSIGgV", "_blank")}
-              className="group inline-flex items-center gap-3 rounded-full bg-violet-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-violet-200 transition-all duration-300 hover:-translate-y-1 hover:bg-violet-700 hover:shadow-xl hover:shadow-violet-300 cursor-pointer"
+              onClick={() =>
+                window.open("https://pay.kiwify.com.br/ZzSIGgV", "_blank")
+              }
+              className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 px-6 py-4 text-left font-semibold text-white shadow-lg shadow-violet-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-fuchsia-600/40 cursor-pointer"
             >
-              Quero comprar o curso
-              <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">→</span>
+              {/* Brilho sutil passando ao passar o mouse */}
+              <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+              <span className="relative flex flex-col">
+                
+                <span className="text-base sm:text-lg font-bold leading-snug">
+                  Quero comprar com desconto
+                </span>
+              </span>
+
+              <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:bg-white/25">
+                →
+              </span>
             </button>
+
+           
           </div>
         </div>
 
@@ -71,7 +99,7 @@ export const Curso = () => {
                 "Você aprende técnicas e segredos da locução publicitária usados no mercado atual.",
                 "Você aprende a desenvolver uma boa dicção e utilizar sua voz de forma profissional.",
                 "Você estará preparado para conquistar uma renda extra ou iniciar um novo plano de carreira.",
-                "Aprenda em apenas 3 meses o que cursos semelhantes podem levar até um ano para ensinar."
+                "Aprenda em apenas 3 meses o que cursos semelhantes podem levar até um ano para ensinar.",
               ].map((texto, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-600 text-xs font-bold text-white shadow-sm">
@@ -86,14 +114,15 @@ export const Curso = () => {
           </div>
 
           {/* CARDS CIRCULARES */}
-          <div className="mt-8 w-full"> 
+          <div className="mt-8 w-full">
             <CardsAbout />
           </div>
 
           {/* OBSERVAÇÃO */}
           <div className="mt-8 pt-6 border-t border-violet-200/60 text-center lg:text-left">
             <p className="text-xs sm:text-sm font-medium text-neutral-600">
-              <strong className="text-neutral-800">Observação:</strong> Esse curso não forma locutor de rádio e não fornece DRT.
+              <strong className="text-neutral-800">Nota:</strong> Esse curso não
+              forma locutor de rádio e não fornece DRT.
             </p>
           </div>
 
