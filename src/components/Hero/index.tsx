@@ -107,7 +107,7 @@ export const Hero = () => {
               Confira o desconto exclusivo e transforme sua voz em
               oportunidade.
             </p>
-feat: 
+
           </div>
         </div>
       )}

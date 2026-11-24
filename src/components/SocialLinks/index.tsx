@@ -2,7 +2,7 @@ import iconInstagram from "@/assets/images/icon-instagram.png";
 
 
 const socialLinks = [
-  { href: "https://www.instagram.com/instalocutores/", icon: iconInstagram, name: "Instagram" },
+  { href: "https://www.instagram.com/instalocutores/" , icon: iconInstagram, name: "Instagram" },
   
 ];
 

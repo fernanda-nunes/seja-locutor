@@ -61,9 +61,9 @@ export const Curso = () => {
             <button
               type="button"
               onClick={() =>
-                window.open("https://pay.kiwify.com.br/ZzSIGgV", "_blank")
+                window.open("https://pay.kiwify.com.br/TTG9O1p", "_blank")
               }
-              className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 px-6 py-4 text-left font-semibold text-white shadow-lg shadow-violet-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-fuchsia-600/40 cursor-pointer"
+              className="group relative flex items-center justify-between gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-violet-600 via-yellow-600 to-fuchsia-600 px-6 py-4 text-left font-semibold text-white shadow-lg shadow-violet-600/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-fuchsia-600/40 cursor-pointer"
             >
               {/* Brilho sutil passando ao passar o mouse */}
               <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
