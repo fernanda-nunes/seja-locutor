@@ -22,17 +22,17 @@
   --color-error: hsl(0, 83%, 58%);
   --color-footer-bg: hsl(0, 0%, 20%);
   --color-footer-hover: hsl(0, 0%, 80%);
-  --color-depoimentos-tom: hsl(328, 48%, 98%);  
+  --color-depoimentos-tom: hsl(328, 48%, 98%);
 
-  --font-display: "Montserrat", sans-serif;  
+  --font-display: "Montserrat", sans-serif;
 }
 
-@font-face { 
+@font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url("../assets/fonts/Montserrat-Thin.ttf") format("woff2"); 
+  src: url("../assets/fonts/Montserrat-Thin.ttf") format("truetype");
 }
 
 @font-face {
@@ -40,7 +40,7 @@
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url("../assets/fonts/Montserrat-ExtraLight.ttf") format("woff2");  
+  src: url("../assets/fonts/Montserrat-ExtraLight.ttf") format("truetype");
 }
 
 @font-face {
@@ -48,16 +48,15 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/Montserrat-Regular.ttf") format("woff2");  
+  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
 }
-
 
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../assets/fonts/Montserrat-Medium.ttf") format("woff2");  
+  src: url("../assets/fonts/Montserrat-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -65,16 +64,27 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../assets/fonts/Montserrat-Bold.ttf") format("woff2");
+  src: url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
 }
 
 @utility container {
+  width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 10px;
+  margin-inline: auto;
+  padding-inline: 12px;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 24px;
+  }
+}
+
+html,
 body {
+  width: 100%;
+  min-height: 100dvh;
+  overflow-x: clip;
   font-family: var(--font-display);
   color: #ffffff;
   background-color: var(--color-surface);

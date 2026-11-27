@@ -1,15 +1,27 @@
 .outletGrid {
   display: grid;
-  gap: 20px; 
-  border-radius: 20px; 
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  gap: 20px;
+  border-radius: 20px;
   overflow: hidden;
-  grid-template-columns: repeat(1fr);
-    grid-template-areas:
-    "curso "
-    "aulaAvulsa "
-    "mentoria "
-    "quemSouEu "
-    "depoimentos ";    
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "curso"
+    "aulaAvulsa"
+    "mentoria"
+    "quemSouEu"
+    "depoimentos";
+}
+
+.curso,
+.aulaAvulsa,
+.mentoria,
+.quemSouEu,
+.depoimentos {
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .curso {
