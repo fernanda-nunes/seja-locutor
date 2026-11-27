@@ -15,6 +15,7 @@ import { Route as AppQuemSouEuIndexRouteImport } from './pages/_app/quemSouEu/in
 import { Route as AppMentoriaIndexRouteImport } from './pages/_app/mentoria/index'
 import { Route as AppDepoimentosIndexRouteImport } from './pages/_app/depoimentos/index'
 import { Route as AppCursoIndexRouteImport } from './pages/_app/curso/index'
+import { Route as AppAulaavulsaIndexRouteImport } from './pages/_app/aulaavulsa/index'
 
 const AppLayoutRoute = AppLayoutRouteImport.update({
   id: '/_app',
@@ -45,9 +46,15 @@ const AppCursoIndexRoute = AppCursoIndexRouteImport.update({
   path: '/curso/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
+const AppAulaavulsaIndexRoute = AppAulaavulsaIndexRouteImport.update({
+  id: '/aulaavulsa/',
+  path: '/aulaavulsa/',
+  getParentRoute: () => AppLayoutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
+  '/aulaavulsa': typeof AppAulaavulsaIndexRoute
   '/curso': typeof AppCursoIndexRoute
   '/depoimentos': typeof AppDepoimentosIndexRoute
   '/mentoria': typeof AppMentoriaIndexRoute
@@ -55,6 +62,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof AppIndexRoute
+  '/aulaavulsa': typeof AppAulaavulsaIndexRoute
   '/curso': typeof AppCursoIndexRoute
   '/depoimentos': typeof AppDepoimentosIndexRoute
   '/mentoria': typeof AppMentoriaIndexRoute
@@ -64,6 +72,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppLayoutRouteWithChildren
   '/_app/': typeof AppIndexRoute
+  '/_app/aulaavulsa/': typeof AppAulaavulsaIndexRoute
   '/_app/curso/': typeof AppCursoIndexRoute
   '/_app/depoimentos/': typeof AppDepoimentosIndexRoute
   '/_app/mentoria/': typeof AppMentoriaIndexRoute
@@ -71,13 +80,26 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/curso' | '/depoimentos' | '/mentoria' | '/quemSouEu'
+  fullPaths:
+    | '/'
+    | '/aulaavulsa'
+    | '/curso'
+    | '/depoimentos'
+    | '/mentoria'
+    | '/quemSouEu'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/curso' | '/depoimentos' | '/mentoria' | '/quemSouEu'
+  to:
+    | '/'
+    | '/aulaavulsa'
+    | '/curso'
+    | '/depoimentos'
+    | '/mentoria'
+    | '/quemSouEu'
   id:
     | '__root__'
     | '/_app'
     | '/_app/'
+    | '/_app/aulaavulsa/'
     | '/_app/curso/'
     | '/_app/depoimentos/'
     | '/_app/mentoria/'
@@ -132,11 +154,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCursoIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
+    '/_app/aulaavulsa/': {
+      id: '/_app/aulaavulsa/'
+      path: '/aulaavulsa'
+      fullPath: '/aulaavulsa'
+      preLoaderRoute: typeof AppAulaavulsaIndexRouteImport
+      parentRoute: typeof AppLayoutRoute
+    }
   }
 }
 
 interface AppLayoutRouteChildren {
   AppIndexRoute: typeof AppIndexRoute
+  AppAulaavulsaIndexRoute: typeof AppAulaavulsaIndexRoute
   AppCursoIndexRoute: typeof AppCursoIndexRoute
   AppDepoimentosIndexRoute: typeof AppDepoimentosIndexRoute
   AppMentoriaIndexRoute: typeof AppMentoriaIndexRoute
@@ -145,6 +175,7 @@ interface AppLayoutRouteChildren {
 
 const AppLayoutRouteChildren: AppLayoutRouteChildren = {
   AppIndexRoute: AppIndexRoute,
+  AppAulaavulsaIndexRoute: AppAulaavulsaIndexRoute,
   AppCursoIndexRoute: AppCursoIndexRoute,
   AppDepoimentosIndexRoute: AppDepoimentosIndexRoute,
   AppMentoriaIndexRoute: AppMentoriaIndexRoute,
