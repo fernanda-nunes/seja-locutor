@@ -11,7 +11,7 @@ export const AulaAvulsa = () => {
         <span className="inline-block rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-violet-700 mb-3">
           Oportunidade única, por tempo limitado
         </span>
-        <h2 className="text-3xl font-bold tracking-tight text-violet-700 sm:text-4xl lg:text-5xl">
+        <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl lg:text-5xl">
           Aula Avulsa
         </h2>
       </div>
@@ -20,7 +20,7 @@ export const AulaAvulsa = () => {
       <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
         {/* COLUNA ESQUERDA — TEXTO E BOTÃO */}
         <div className="flex flex-col w-full max-w-xl mx-auto lg:mx-0">
-          <p className="font-semibold text-black text-lg text-center sm:text-left">
+          <p className="font-semibold text-violet-700 text-lg text-center sm:text-left">
             Aprenda locução de vinhetas e chamadas
           </p>
 
