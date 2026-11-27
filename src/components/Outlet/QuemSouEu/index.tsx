@@ -99,7 +99,7 @@ export const QuemSouEu = () => {
           <div className="relative">
             <div className="mb-4 flex items-center justify-between">
               <h3 className="text-xl sm:text-2xl font-bold text-neutral-900">
-                Locuções em Ação
+                Locuções de Rita Mirone
               </h3>
               <div className="flex items-center gap-2">
                 <button
