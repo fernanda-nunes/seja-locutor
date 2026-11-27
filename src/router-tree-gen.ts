@@ -11,11 +11,11 @@
 import { Route as rootRouteImport } from './pages/__root'
 import { Route as AppLayoutRouteImport } from './pages/_app/layout'
 import { Route as AppIndexRouteImport } from './pages/_app/index'
-import { Route as AppQuemSouEuIndexRouteImport } from './pages/_app/quemSouEu/index'
-import { Route as AppMentoriaIndexRouteImport } from './pages/_app/mentoria/index'
-import { Route as AppDepoimentosIndexRouteImport } from './pages/_app/depoimentos/index'
-import { Route as AppCursoIndexRouteImport } from './pages/_app/curso/index'
 import { Route as AppAulaavulsaIndexRouteImport } from './pages/_app/aulaavulsa/index'
+import { Route as AppCursoIndexRouteImport } from './pages/_app/curso/index'
+import { Route as AppDepoimentosIndexRouteImport } from './pages/_app/depoimentos/index'
+import { Route as AppMentoriaIndexRouteImport } from './pages/_app/mentoria/index'
+import { Route as AppQuemSouEuIndexRouteImport } from './pages/_app/quemSouEu/index'
 
 const AppLayoutRoute = AppLayoutRouteImport.update({
   id: '/_app',
@@ -26,19 +26,9 @@ const AppIndexRoute = AppIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
-const AppQuemSouEuIndexRoute = AppQuemSouEuIndexRouteImport.update({
-  id: '/quemSouEu/',
-  path: '/quemSouEu/',
-  getParentRoute: () => AppLayoutRoute,
-} as any)
-const AppMentoriaIndexRoute = AppMentoriaIndexRouteImport.update({
-  id: '/mentoria/',
-  path: '/mentoria/',
-  getParentRoute: () => AppLayoutRoute,
-} as any)
-const AppDepoimentosIndexRoute = AppDepoimentosIndexRouteImport.update({
-  id: '/depoimentos/',
-  path: '/depoimentos/',
+const AppAulaavulsaIndexRoute = AppAulaavulsaIndexRouteImport.update({
+  id: '/aulaavulsa/',
+  path: '/aulaavulsa/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
 const AppCursoIndexRoute = AppCursoIndexRouteImport.update({
@@ -46,19 +36,29 @@ const AppCursoIndexRoute = AppCursoIndexRouteImport.update({
   path: '/curso/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
-const AppAulaavulsaIndexRoute = AppAulaavulsaIndexRouteImport.update({
-  id: '/aulaavulsa/',
-  path: '/aulaavulsa/',
+const AppDepoimentosIndexRoute = AppDepoimentosIndexRouteImport.update({
+  id: '/depoimentos/',
+  path: '/depoimentos/',
+  getParentRoute: () => AppLayoutRoute,
+} as any)
+const AppMentoriaIndexRoute = AppMentoriaIndexRouteImport.update({
+  id: '/mentoria/',
+  path: '/mentoria/',
+  getParentRoute: () => AppLayoutRoute,
+} as any)
+const AppQuemSouEuIndexRoute = AppQuemSouEuIndexRouteImport.update({
+  id: '/quemSouEu/',
+  path: '/quemSouEu/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
-  '/aulaavulsa': typeof AppAulaavulsaIndexRoute
-  '/curso': typeof AppCursoIndexRoute
-  '/depoimentos': typeof AppDepoimentosIndexRoute
-  '/mentoria': typeof AppMentoriaIndexRoute
-  '/quemSouEu': typeof AppQuemSouEuIndexRoute
+  '/aulaavulsa/': typeof AppAulaavulsaIndexRoute
+  '/curso/': typeof AppCursoIndexRoute
+  '/depoimentos/': typeof AppDepoimentosIndexRoute
+  '/mentoria/': typeof AppMentoriaIndexRoute
+  '/quemSouEu/': typeof AppQuemSouEuIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof AppIndexRoute
@@ -82,19 +82,14 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/aulaavulsa'
-    | '/curso'
-    | '/depoimentos'
-    | '/mentoria'
-    | '/quemSouEu'
+    | '/aulaavulsa/'
+    | '/curso/'
+    | '/depoimentos/'
+    | '/mentoria/'
+    | '/quemSouEu/'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
-    | '/aulaavulsa'
-    | '/curso'
-    | '/depoimentos'
-    | '/mentoria'
-    | '/quemSouEu'
+    '/' | '/aulaavulsa' | '/curso' | '/depoimentos' | '/mentoria' | '/quemSouEu'
   id:
     | '__root__'
     | '/_app'
@@ -115,7 +110,7 @@ declare module '@tanstack/react-router' {
     '/_app': {
       id: '/_app'
       path: ''
-      fullPath: ''
+      fullPath: '/'
       preLoaderRoute: typeof AppLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -126,39 +121,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
-    '/_app/quemSouEu/': {
-      id: '/_app/quemSouEu/'
-      path: '/quemSouEu'
-      fullPath: '/quemSouEu'
-      preLoaderRoute: typeof AppQuemSouEuIndexRouteImport
-      parentRoute: typeof AppLayoutRoute
-    }
-    '/_app/mentoria/': {
-      id: '/_app/mentoria/'
-      path: '/mentoria'
-      fullPath: '/mentoria'
-      preLoaderRoute: typeof AppMentoriaIndexRouteImport
-      parentRoute: typeof AppLayoutRoute
-    }
-    '/_app/depoimentos/': {
-      id: '/_app/depoimentos/'
-      path: '/depoimentos'
-      fullPath: '/depoimentos'
-      preLoaderRoute: typeof AppDepoimentosIndexRouteImport
+    '/_app/aulaavulsa/': {
+      id: '/_app/aulaavulsa/'
+      path: '/aulaavulsa'
+      fullPath: '/aulaavulsa/'
+      preLoaderRoute: typeof AppAulaavulsaIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
     '/_app/curso/': {
       id: '/_app/curso/'
       path: '/curso'
-      fullPath: '/curso'
+      fullPath: '/curso/'
       preLoaderRoute: typeof AppCursoIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
-    '/_app/aulaavulsa/': {
-      id: '/_app/aulaavulsa/'
-      path: '/aulaavulsa'
-      fullPath: '/aulaavulsa'
-      preLoaderRoute: typeof AppAulaavulsaIndexRouteImport
+    '/_app/depoimentos/': {
+      id: '/_app/depoimentos/'
+      path: '/depoimentos'
+      fullPath: '/depoimentos/'
+      preLoaderRoute: typeof AppDepoimentosIndexRouteImport
+      parentRoute: typeof AppLayoutRoute
+    }
+    '/_app/mentoria/': {
+      id: '/_app/mentoria/'
+      path: '/mentoria'
+      fullPath: '/mentoria/'
+      preLoaderRoute: typeof AppMentoriaIndexRouteImport
+      parentRoute: typeof AppLayoutRoute
+    }
+    '/_app/quemSouEu/': {
+      id: '/_app/quemSouEu/'
+      path: '/quemSouEu'
+      fullPath: '/quemSouEu/'
+      preLoaderRoute: typeof AppQuemSouEuIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
   }
