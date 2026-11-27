@@ -3,7 +3,7 @@ import path from 'node:path';
 import { chromium } from 'playwright';
 import { preview } from 'vite';
 
-const ROUTES = ['/'];
+const ROUTES = ['/', '/aulaavulsa'];
 const PORT = 4173;
 
 async function prerender() {
