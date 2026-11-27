@@ -3,6 +3,7 @@ import { Curso } from "./Curso/index";
 import { Mentoria } from "./Mentoria/index" 
 import { QuemSouEu } from "./QuemSouEu/index"
 import { Depoimentos } from "./Depoimentos/index"
+import { AulaAvulsa } from "./AulaAvulsa/index"
 
 // Componente principal da Outlet
 export const Outlet = () => {
@@ -17,6 +18,13 @@ export const Outlet = () => {
         <section className={`${styles.curso} rounded-[20px]`}>
 
          <Curso />
+
+        </section>
+
+        {/* Sessão Aula Avulsa */}
+        <section className={`${styles.aulaAvulsa} rounded-[20px]`}>
+
+         <AulaAvulsa />
 
         </section>
 

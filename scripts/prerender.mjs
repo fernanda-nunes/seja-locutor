@@ -1,55 +1,39 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { createRequire } from 'node:module';
-import { createServer } from 'vite';
-
-const require = createRequire(import.meta.url);
-const React = require('react');
-const { renderToString } = require('react-dom/server');
+import { chromium } from 'playwright';
+import { preview } from 'vite';
 
 const ROUTES = ['/'];
+const PORT = 4173;
 
 async function prerender() {
-  const vite = await createServer({
-    server: { middlewareMode: true },
-    appType: 'custom',
+  const server = await preview({
+    preview: { port: PORT, strictPort: true },
   });
 
-  try {
-    const { RouterProvider } = await vite.ssrLoadModule('@tanstack/react-router');
-    const { router } = await vite.ssrLoadModule('/src/App.tsx');
+  const browser = await chromium.launch();
 
-    const distIndexPath = path.resolve('dist/index.html');
-    const template = fs.readFileSync(distIndexPath, 'utf-8');
+  try {
+    const page = await browser.newPage();
 
     for (const route of ROUTES) {
-      await router.navigate({ to: route });
-      await router.load();
+      const url = `http://localhost:${PORT}${route}`;
+      await page.goto(url, { waitUntil: 'networkidle' });
+      await page.waitForSelector('#root > *');
 
-      const appHtml = renderToString(
-        React.createElement(
-          React.StrictMode,
-          null,
-          React.createElement(RouterProvider, { router })
-        )
-      );
-
-      const finalHtml = template.replace(
-        '<div id="root"></div>',
-        `<div id="root">${appHtml}</div>`
-      );
-
+      const html = await page.content();
       const outFile =
         route === '/'
-          ? distIndexPath
+          ? path.resolve('dist/index.html')
           : path.resolve('dist', route.replace(/^\//, ''), 'index.html');
 
       fs.mkdirSync(path.dirname(outFile), { recursive: true });
-      fs.writeFileSync(outFile, finalHtml, 'utf-8');
+      fs.writeFileSync(outFile, html, 'utf-8');
       console.log(`Pré-renderizado: ${route}`);
     }
   } finally {
-    await vite.close();
+    await browser.close();
+    server.httpServer.close();
   }
 }
 

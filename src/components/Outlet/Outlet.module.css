@@ -5,15 +5,21 @@
   overflow: hidden;
   grid-template-columns: repeat(1fr);
     grid-template-areas:
-    "sobre "
+    "curso "
+    "aulaAvulsa "
     "mentoria "
     "quemSouEu "
     "depoimentos ";    
 }
 
-.sobre {
-  grid-area: sobre;
+.curso {
+  grid-area: curso;
   background-color: rgb(243, 232, 255);
+}
+
+.aulaAvulsa {
+  grid-area: aulaAvulsa;
+  background-color: hwb(83 75% 2%);
 }
 
 .mentoria {
