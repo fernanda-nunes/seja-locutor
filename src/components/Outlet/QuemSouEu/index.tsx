@@ -4,7 +4,6 @@ import FotoRita from "../../../assets/images/quem-eu-sou-rita.webp";
 import VideoLocucao from "../../../assets/videos/radio-locucao-rita.mp4";
 import Randvi from "../../../assets/images/randvi-assassins-creed.webp";
 import Slone from "../../../assets/images/slone-titanfall.webp";
-import Sif from "../../../assets/images/sif-lego.webp";
 import CapaVideo from "../../../assets/images/capa-locucoes-quem.webp";
 
 interface GameHighlight {
@@ -32,13 +31,7 @@ export const QuemSouEu = () => {
       character: "Slone",
       url: "https://www.instagram.com/reel/CfI7WwsFxA5/?dmpr=N3E4ZncyeGlzNzh2",
     },
-    {
-      img: Sif,
-      game: "Lego Marvel Vingadores",
-      character: "Sif",
-      url: "#",
-      span: "sm:col-span-2 lg:col-span-1",
-    },
+    
   ];
 
   const toggleVideo = () => {
@@ -87,7 +80,7 @@ export const QuemSouEu = () => {
             </p>
             <p>
               Unindo sua sólida bagagem jornalística e artística, ela desenvolveu
-              uma metodologia pratica e direta para ensinar você a dominar a
+              uma metodologia prática e direta para ensinar você a dominar a
               própria voz, projetar autoridade e transformá-la em uma poderosa
               fonte de renda.
             </p>

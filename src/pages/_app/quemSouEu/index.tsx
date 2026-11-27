@@ -3,7 +3,7 @@ import { Mic } from 'lucide-react' // Importando o ícone de microfone
 import { QuemSouEu } from '../../../components/Outlet/QuemSouEu'
 
 
-export const Route = createFileRoute("/_app/quemSouEu/")({
+export const Route = createFileRoute("/_app/quemsoueu/")({
   component: RouteComponent,
   head: () => ({
     meta: [{ title: "Quem sou eu - A Voz que Vende" }],

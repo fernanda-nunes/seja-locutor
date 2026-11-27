@@ -15,7 +15,7 @@ import { Route as AppAulaavulsaIndexRouteImport } from './pages/_app/aulaavulsa/
 import { Route as AppCursoIndexRouteImport } from './pages/_app/curso/index'
 import { Route as AppDepoimentosIndexRouteImport } from './pages/_app/depoimentos/index'
 import { Route as AppMentoriaIndexRouteImport } from './pages/_app/mentoria/index'
-import { Route as AppQuemSouEuIndexRouteImport } from './pages/_app/quemSouEu/index'
+import { Route as AppQuemsoueuIndexRouteImport } from './pages/_app/quemsoueu/index'
 
 const AppLayoutRoute = AppLayoutRouteImport.update({
   id: '/_app',
@@ -46,9 +46,9 @@ const AppMentoriaIndexRoute = AppMentoriaIndexRouteImport.update({
   path: '/mentoria/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
-const AppQuemSouEuIndexRoute = AppQuemSouEuIndexRouteImport.update({
-  id: '/quemSouEu/',
-  path: '/quemSouEu/',
+const AppQuemsoueuIndexRoute = AppQuemsoueuIndexRouteImport.update({
+  id: '/quemsoueu/',
+  path: '/quemsoueu/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
 
@@ -58,7 +58,7 @@ export interface FileRoutesByFullPath {
   '/curso/': typeof AppCursoIndexRoute
   '/depoimentos/': typeof AppDepoimentosIndexRoute
   '/mentoria/': typeof AppMentoriaIndexRoute
-  '/quemSouEu/': typeof AppQuemSouEuIndexRoute
+  '/quemsoueu/': typeof AppQuemsoueuIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof AppIndexRoute
@@ -66,7 +66,7 @@ export interface FileRoutesByTo {
   '/curso': typeof AppCursoIndexRoute
   '/depoimentos': typeof AppDepoimentosIndexRoute
   '/mentoria': typeof AppMentoriaIndexRoute
-  '/quemSouEu': typeof AppQuemSouEuIndexRoute
+  '/quemsoueu': typeof AppQuemsoueuIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -76,7 +76,7 @@ export interface FileRoutesById {
   '/_app/curso/': typeof AppCursoIndexRoute
   '/_app/depoimentos/': typeof AppDepoimentosIndexRoute
   '/_app/mentoria/': typeof AppMentoriaIndexRoute
-  '/_app/quemSouEu/': typeof AppQuemSouEuIndexRoute
+  '/_app/quemsoueu/': typeof AppQuemsoueuIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -86,10 +86,10 @@ export interface FileRouteTypes {
     | '/curso/'
     | '/depoimentos/'
     | '/mentoria/'
-    | '/quemSouEu/'
+    | '/quemsoueu/'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/aulaavulsa' | '/curso' | '/depoimentos' | '/mentoria' | '/quemSouEu'
+    '/' | '/aulaavulsa' | '/curso' | '/depoimentos' | '/mentoria' | '/quemsoueu'
   id:
     | '__root__'
     | '/_app'
@@ -98,7 +98,7 @@ export interface FileRouteTypes {
     | '/_app/curso/'
     | '/_app/depoimentos/'
     | '/_app/mentoria/'
-    | '/_app/quemSouEu/'
+    | '/_app/quemsoueu/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -149,11 +149,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppMentoriaIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
-    '/_app/quemSouEu/': {
-      id: '/_app/quemSouEu/'
-      path: '/quemSouEu'
-      fullPath: '/quemSouEu/'
-      preLoaderRoute: typeof AppQuemSouEuIndexRouteImport
+    '/_app/quemsoueu/': {
+      id: '/_app/quemsoueu/'
+      path: '/quemsoueu'
+      fullPath: '/quemsoueu/'
+      preLoaderRoute: typeof AppQuemsoueuIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
   }
@@ -165,7 +165,7 @@ interface AppLayoutRouteChildren {
   AppCursoIndexRoute: typeof AppCursoIndexRoute
   AppDepoimentosIndexRoute: typeof AppDepoimentosIndexRoute
   AppMentoriaIndexRoute: typeof AppMentoriaIndexRoute
-  AppQuemSouEuIndexRoute: typeof AppQuemSouEuIndexRoute
+  AppQuemsoueuIndexRoute: typeof AppQuemsoueuIndexRoute
 }
 
 const AppLayoutRouteChildren: AppLayoutRouteChildren = {
@@ -174,7 +174,7 @@ const AppLayoutRouteChildren: AppLayoutRouteChildren = {
   AppCursoIndexRoute: AppCursoIndexRoute,
   AppDepoimentosIndexRoute: AppDepoimentosIndexRoute,
   AppMentoriaIndexRoute: AppMentoriaIndexRoute,
-  AppQuemSouEuIndexRoute: AppQuemSouEuIndexRoute,
+  AppQuemsoueuIndexRoute: AppQuemsoueuIndexRoute,
 }
 
 const AppLayoutRouteWithChildren = AppLayoutRoute._addFileChildren(

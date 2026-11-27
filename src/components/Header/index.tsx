@@ -10,8 +10,9 @@ export interface NavLink {
 const navLinks: NavLink[] = [
 
   { name: "Curso", href: "/curso" },
+  { name: "Aula Avulsa", href: "/aulaavulsa" },
   { name: "Mentoria", href: "/mentoria" },
-    { name: "Quem sou eu", href: "/quemSouEu" },
+    { name: "Quem sou eu", href: "/quemsoueu" },
   { name: "Depoimentos", href: "/depoimentos" },
 ];
 
@@ -46,7 +47,7 @@ export const Header = () => {
               </li>
 
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">
-                <Link to="/quemSouEu">Quem sou eu</Link>
+                <Link to="/quemsoueu">Quem sou eu</Link>
               </li>
 
               <li className="hidden lg:block hover:text-purple-500 transition-colors duration-300">
@@ -54,7 +55,7 @@ export const Header = () => {
               </li>
               
               <li className="lg:hidden">
-                <MenuMobile navLinks={navLinks} />
+                <MenuMobile navLinks={navLinks} />  
               </li>
               
             </ul>
