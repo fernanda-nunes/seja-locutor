@@ -36,7 +36,7 @@ export const QuemSouEu = () => {
       img: Sif,
       game: "Lego Marvel Vingadores",
       character: "Sif",
-      url: "https://www.disneyplus.com/pt-br/browse/entity-166d42c1-9757-49c1-8a65-7eec13f6817f",
+      url: "#",
       span: "sm:col-span-2 lg:col-span-1",
     },
   ];
