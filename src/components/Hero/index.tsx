@@ -1,4 +1,4 @@
-import Banner from "../../assets/images/hero.jpg";
+import Banner from "../../assets/images/hero.webp";
 import Arrow from "../../assets/images/seta.png";
 import { Overlay } from "../Overlay";
 
