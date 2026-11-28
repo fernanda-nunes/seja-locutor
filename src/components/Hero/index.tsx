@@ -17,7 +17,7 @@ export const Hero = () => {
         <Overlay
           title="seja locutor"
           subtitle="transformando vozes em oportunidades"
-          className="absolute bottom-50 right-117 left-auto z-10 justify-start transition-all duration-300 max-[1389px]:right-100 max-[1246px]:right-80 max-[1100px]:inset-x-0 max-[1100px]:bottom-20 max-[1100px]:right-0 max-[1100px]:justify-center max-[1100px]:px-7 max-[1100px]:pb-20"
+          className="absolute bottom-100 right-114 left-auto z-10 justify-start transition-all duration-300 max-[1389px]:right-100 max-[1246px]:right-80 max-[1100px]:inset-x-0 max-[1100px]:bottom-20 max-[1100px]:right-0 max-[1100px]:justify-center max-[1100px]:px-7 max-[1100px]:pb-20"
         >
           <div className="flex items-center gap-3"></div>
         </Overlay>
